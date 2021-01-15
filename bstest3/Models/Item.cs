@@ -5,4 +5,5 @@ namespace bstest3.Models
         public int Id { get; set; }
         public string Value { get; set; }
     }
+    
 }
