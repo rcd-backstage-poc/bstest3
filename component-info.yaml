@@ -1,0 +1,31 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: "bstest3"
+  description: "testing2"
+  annotations:
+    github.com/project-slug: "rcd-backstage-poc/bstest3"
+    backstage.io/techdocs-ref: dir:./
+  tags:
+    - dotnet
+    - api
+  appId: "200550"
+  infrastructure:
+    test:
+      account: "259760847234"
+      region: us-east-2
+      modules:
+        - aws-acm-certificate-tf
+        - aws-ecs-app-tf
+        - aws-route53-record-tf
+    prod:
+      account: "259760847234"
+      region: us-east-2
+      modules:
+        - aws-acm-certificate-tf
+        - aws-ecs-app-tf
+        - aws-route53-record-tf
+spec:
+  type: service
+  lifecycle: experimental
+  owner: "kthinnes1"
